@@ -1,0 +1,41 @@
+{
+    "statusCode": 100,
+    "body": {
+        "deviceList": [
+            {
+                "deviceId": "C0613F99F313",
+                "deviceName": "tamc_04",
+                "deviceType": "Meter",
+                "hubDeviceId": "000000000000"
+            },
+            {
+                "deviceId": "C1B73A2057E7",
+                "deviceName": "tamc_02",
+                "deviceType": "Meter",
+                "hubDeviceId": "000000000000"
+            },
+            {
+                "deviceId": "C3A9F4C1FE47",
+                "deviceName": "tamc_hub",
+                "deviceType": "Hub Mini",
+                "enableCloudService": true,
+                "hubDeviceId": "000000000000"
+            },
+            {
+                "deviceId": "CD74470C5C61",
+                "deviceName": "tamc_03",
+                "deviceType": "Meter",
+                "hubDeviceId": "000000000000"
+            },
+            {
+                "deviceId": "F87D668F874A",
+                "deviceName": "tamc_01",
+                "deviceType": "Meter",
+                "enableCloudService": true,
+                "hubDeviceId": "000000000000"
+            }
+        ],
+        "infraredRemoteList": []
+    },
+    "message": "success"
+}
