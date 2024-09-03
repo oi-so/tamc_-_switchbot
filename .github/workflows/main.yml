@@ -5,6 +5,7 @@ on:
   schedule:
     # 定期実行する時間・・・①
     - cron: '00,10,20,30,40,50 * * * *'
+  workflow_dispatch: # 手動で実行できるようにする
 
 jobs:
   build:
