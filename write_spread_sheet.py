@@ -3,6 +3,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import datetime
 from pprint import pprint
+import os
 
 def main():
     data = get_all_data()
@@ -24,7 +25,8 @@ def main():
 
 
     gc = gspread.authorize(credentials)
-    spreadsheet_url = "https://docs.google.com/spreadsheets/d/1t61cLDyZkY_Ak2t5Tq3HefJDGHgkCyb9vL_XrBqKCdM/"
+    # spreadsheetのurlを設定
+    spreadsheet_url = os.environ["spreadSheetURL"]
     spreadsheet = gc.open_by_url(spreadsheet_url)
     ws = spreadsheet.worksheet("保存先")
     last_row = len(ws.col_values(2)) + 1
