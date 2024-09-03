@@ -26,7 +26,7 @@ def main():
 
     gc = gspread.authorize(credentials)
     # spreadsheetのurlを設定
-    spreadsheet_url = os.environ["spreadSheetURL"]
+    spreadsheet_url = os.environ["SPREAD_SHEET_URL"]
     spreadsheet = gc.open_by_url(spreadsheet_url)
     ws = spreadsheet.worksheet("保存先")
     last_row = len(ws.col_values(2)) + 1
