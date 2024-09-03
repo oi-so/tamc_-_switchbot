@@ -32,3 +32,8 @@ jobs:
         run: |
           # 定期実行するファイルを指定。・・・③
           python write_spread_sheet.py
+        env:
+          # 環境変数設定
+          SPREAD_SHEET_URL: ${{ secrets.SPREAD_SHEET_URL }}
+          LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
+          
