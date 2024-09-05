@@ -8,8 +8,8 @@ import os
 def main():
     data = get_all_data()
     device_count = len(data)
-    date = datetime.datetime.now().strftime("%Y/%m/%d")
-    time = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+    date = datetime.datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y/%m/%d")
+    time = datetime.datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y/%m/%d %H:%M:%S")
 
 
     scopes = [
