@@ -63,8 +63,7 @@ def get(device_id):
 
 
 def get_json():
-    file = open('./system/token.json', 'r')
-    token_data = json.load(file)
+    token_data = {"token": os.environ["TOKEN"], "secret": os.environ["SECRET"]}
     return token_data
 
 
