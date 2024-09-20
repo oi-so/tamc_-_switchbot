@@ -36,4 +36,8 @@ jobs:
           # 環境変数設定
           SPREAD_SHEET_URL: ${{ secrets.SPREAD_SHEET_URL }}
           LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
+          SECRET: ${{ secrets.SECRET }}
+          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          
           
