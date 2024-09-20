@@ -20,8 +20,8 @@ def get(device_id):
         os.makedirs(dir_name)
 
     token_data = get_json()
-    token = token_data["token"]
-    secret = token_data["secret"]
+    token = os.environ("TOKEN")
+    secret = os.environ("SECRET")
 
     nonce = str(uuid.uuid4())
     t = int(round(time.time() * 1000))
