@@ -18,9 +18,12 @@ def main():
         'https://www.googleapis.com/auth/drive'
     ]
 
-
+    # 環境変数からJSONデータを取得
+    service_account_info = os.getenv("SERVICE_ACCOUNT_KEY")  # 修正された環境変数名
+    # 文字列として取得したJSONを辞書に変換
+    service_account_dict = json.loads(service_account_info)
     credentials = Credentials.from_service_account_file(
-        "./system/tamc-get-tmp-7093a68fc710.json",
+        service_account_dict
         scopes=scopes
     )
 
