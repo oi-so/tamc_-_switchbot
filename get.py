@@ -49,7 +49,7 @@ def get(device_id):
         print("requestでエラーが発生しました。")
         print(f"エラー内容: {e}\n対象の機械id{device_id}")
 
-        notifyMessage = f"requestでエラーが発生しました。\n時刻: {datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")}\n対象の機械id{device_id}\nエラー内容: {e}"
+        notifyMessage = f"requestでエラーが発生しました。\n時刻: {datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')}\n対象の機械id{device_id}\nエラー内容: {e}"
         send_line_notify(notifyMessage)
 
     
