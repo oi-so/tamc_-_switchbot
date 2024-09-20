@@ -23,7 +23,7 @@ def main():
     # 文字列として取得したJSONを辞書に変換
     service_account_dict = json.loads(service_account_info)
     credentials = Credentials.from_service_account_file(
-        service_account_dict
+        service_account_dict,
         scopes=scopes
     )
 
