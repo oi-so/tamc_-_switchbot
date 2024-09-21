@@ -14,6 +14,7 @@ from notify import send_line_notify
 
 
 def get(device_id):
+    response = ""
     dir_name = "../responses"
 
     if not exists(dir_name):
