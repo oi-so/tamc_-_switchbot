@@ -49,7 +49,7 @@ def get(device_id):
 
     devices = response.json()
     
-     # timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    # timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
     os.makedirs("./data", exist_ok=True)
     response_file = f"./data/status_{device_id}.json"
     with open(response_file, "w") as f:
