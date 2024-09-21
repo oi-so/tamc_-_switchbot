@@ -46,6 +46,15 @@ def get(device_id):
             f"https://api.switch-bot.com/v1.1/devices/{device_id}/status",
             headers=apiHeader,
         )
+
+    devices = response.json()
+    
+     # timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    os.makedirs("./data", exist_ok=True)
+    response_file = f"./data/status_{device_id}.json"
+    with open(response_file, "w") as f:
+        json.dump(devices, f)
+    
     except Exception as e:
         print("requestでエラーが発生しました。")
         print(f"エラー内容: {e}\n対象の機械id{device_id}")
@@ -53,14 +62,6 @@ def get(device_id):
         notifyMessage = f"requestでエラーが発生しました。\n時刻: {datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')}\n対象の機械id{device_id}\nエラー内容: {e}"
         send_line_notify(notifyMessage)
 
-    
-    devices = response.json()
-
-    # timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    os.makedirs("./data", exist_ok=True)
-    response_file = f"./data/status_{device_id}.json"
-    with open(response_file, "w") as f:
-        json.dump(devices, f)
 
 
 def get_json():
